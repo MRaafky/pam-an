@@ -4,11 +4,6 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
 
   const wargaList = [
-    { id: 'SHJ-001', nama: 'Bapak Suparno', alamat: 'RT 01/01 Semenharjo', telp: '08123401', tarif: 2000, meter_awal: 0, status: 'aktif' },
-    { id: 'SHJ-002', nama: 'Ibu Siti Aminah', alamat: 'RT 01/02 Semenharjo', telp: '08123402', tarif: 2000, meter_awal: 0, status: 'aktif' },
-    { id: 'SHJ-003', nama: 'Bapak Winarno', alamat: 'RT 02/01 Semenharjo', telp: '08123403', tarif: 2000, meter_awal: 0, status: 'aktif' },
-    { id: 'SHJ-004', nama: 'Ibu Sriwahyuni', alamat: 'RT 02/02 Semenharjo', telp: '08123404', tarif: 2000, meter_awal: 0, status: 'aktif' },
-    { id: 'SHJ-005', nama: 'Bapak Joko Santoso', alamat: 'RT 03/01 Semenharjo', telp: '08123405', tarif: 2000, meter_awal: 0, status: 'aktif' },
   ]
 
   const { error: we } = await supabase.from('pam_warga').upsert(wargaList, { onConflict: 'id' })
