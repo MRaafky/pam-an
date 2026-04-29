@@ -526,7 +526,7 @@ export default function App() {
             <div style={s.sgCard}>
               <SettRow ico="📤" title="Export Data" desc="Simpan backup JSON" onClick={exportData} last />
             </div>
-            <div style={{ textAlign: 'center', padding: '4px 0 28px', color: '#94a3b8', fontSize: 12 }}>PAM Desa {config.desa} v2.0<br />Powered by Supabase + Next.js</div>
+            <div style={{ textAlign: 'center', padding: '4px 0 28px', color: '#94a3b8', fontSize: 12 }}>PAM Desa {config.desa} v2.0<br />Made by Raafki</div>
           </div>
         </div>}
 
@@ -548,10 +548,12 @@ export default function App() {
             </div>
           },
           { id: 'laporan', label: 'Laporan', icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" /><line x1="2" y1="20" x2="22" y2="20" /></svg> },
+          { id: 'setting', label: 'Pengaturan', icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M12 15.5A3.5 3.5 0 1012 8.5a3.5 3.5 0 000 7z" /><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09a1.65 1.65 0 00-1-1.51 1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09a1.65 1.65 0 001.51-1 1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09c.12.58.52 1.06 1 1.51h.09a1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06c-.21.21-.37.47-.45.76.47.45.86.93 1 1.51H21a2 2 0 010 4h-.09c-.58.12-1.06.52-1.51 1z" /></svg> },
         ].map(n => <div key={n.id} style={{ ...s.ni, ...(page === n.id ? s.niActive : {}) }} onClick={() => setPage(n.id)}>
           <div>{n.icon}</div><span>{n.label}</span>
         </div>)}
       </div>
+      
 
       {/* ====== SHEETS ====== */}
 
